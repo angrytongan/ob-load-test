@@ -1,12 +1,12 @@
 ---
 theme: dashboard
-title: rand - generator, fileattachment, csv
+title: rand - fileattachment, parquet, parquet
 toc: false
 ---
 
 ```js
 import { dotplot } from "/components/dotplot.js";
-const data = FileAttachment("data/rand-xy.csv").csv({ typed: true });
+const data = FileAttachment("data/rand-xy.parquet").parquet();
 ```
 
 <div class="card">${x1y1}</div>

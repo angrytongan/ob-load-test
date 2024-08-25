@@ -1,12 +1,13 @@
 ---
 theme: dashboard
-title: rand - generator, fileattachment, sql
+title: rand - frontmatter, parquet
 toc: false
+sql:
+  rand: data/rand-xy.parquet
 ---
 
 ```js
 import { dotplot } from "/components/dotplot.js";
-const sql = DuckDBClient.sql({ rand: FileAttachment("data/rand-xy.csv") });
 ```
 
 ```sql id=data

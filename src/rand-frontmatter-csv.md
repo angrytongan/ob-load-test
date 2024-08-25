@@ -1,16 +1,17 @@
 ---
 theme: dashboard
-title: rand - generator, fileattachment, db.query
+title: rand - frontmatter, csv
 toc: false
+sql:
+  rand: data/rand-xy.csv
 ---
 
 ```js
 import { dotplot } from "/components/dotplot.js";
-const db = DuckDBClient.of({ rand: FileAttachment("data/rand-xy.csv") });
 ```
 
-```js
-const data = db.query("SELECT * FROM rand");
+```sql id=data
+SELECT * FROM rand
 ```
 
 <div class="card">${x1y1}</div>
