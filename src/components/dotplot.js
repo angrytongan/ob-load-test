@@ -2,7 +2,7 @@ import {resize} from "npm:@observablehq/stdlib";
 import * as d3 from "npm:d3";
 import * as Plot from "npm:@observablehq/plot";
 
-export const dotplot = ([input, x, y, r]) => {
+export const dotplot = (input, x, y, r) => {
   return resize((width) =>
     Plot.plot({
       width,
