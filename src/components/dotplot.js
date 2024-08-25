@@ -2,7 +2,7 @@ import {resize} from "npm:@observablehq/stdlib";
 import * as d3 from "npm:d3";
 import * as Plot from "npm:@observablehq/plot";
 
-export const dotplot = (input, x, y, r) => {
+export const dotplot = (input, x, y) => {
   return resize((width) =>
     Plot.plot({
       width,
@@ -11,8 +11,8 @@ export const dotplot = (input, x, y, r) => {
         Plot.dot(input, {
           x: x,
           y: y,
-          r: r,
-          stroke: (d) => d3.schemeTableau10[d.r],
+          r: 2,
+          fill: (d) => d3.schemeTableau10[Number(d.r) - 1],
         }),
       ],
     })
